@@ -1,0 +1,24 @@
+{
+  "name": "serialized-storage",
+  "version": "1.0.0",
+  "description": "Tiny wrapper around {local|session}storage serialization.",
+  "author": "Danil Kolesnikov <kolesnikovde@gmail.com>",
+  "homepage": "https://github.com/kolesnikovde/serialized-storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kolesnikovde/serialized-storage.git"
+  },
+  "keywords": [
+    "localStorage",
+    "sessionStorage",
+    "serialized-storage"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "2.3.0"
+  }
+}
