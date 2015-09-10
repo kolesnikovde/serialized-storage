@@ -1,9 +1,13 @@
 var assert = require('assert');
 var SerializedStorage = require('./');
 
-var localStorage = {};
+var localStorage;
 
 describe('serialized-storage', function() {
+  beforeEach(function() {
+    localStorage = {};
+  });
+
   it('serializes data', function() {
     var storage = new SerializedStorage(localStorage, { root: 'foo' });
 
@@ -32,6 +36,7 @@ describe('serialized-storage', function() {
     var result = storage.remove('foo');
 
     assert.equal(result, 'bar');
+    assert.deepEqual(storage.data, { bar: 'baz' });
     assert.deepEqual(JSON.parse(localStorage.foo), storage.data);
   });
 
