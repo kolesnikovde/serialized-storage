@@ -1,6 +1,6 @@
 # serialized-storage
 
-Tiny wrapper around {local|session}storage serialization.
+Tiny wrapper around {local|session}Storage serialization.
 
 ### Installation
 
@@ -13,9 +13,9 @@ var SerializedStorage = require('serialized-storage');
 
 var session = new SerializedStorage(sessionStorage, {
   root: 'app-session',
-  // for repeatable reads on each `get`, default is false.
+  // Re-read on each `get`, default is false.
   sync: true,
-  // by default, coder is JSON
+  // By default, coder is JSON.
   coder: {
     parse: function(str) {
       return JSON.parse(unrot13(str));
